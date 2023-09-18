@@ -14,7 +14,7 @@ async function getAddressFromCEP(cep: string): Promise<CepAdrres> {
 
   const { logradouro, complemento, bairro, localidade, uf } = result;
 
-  const CepAddress = { logradouro, complemento, bairro, localidade, uf, };
+  const CepAddress = { logradouro, complemento, bairro, cidade: localidade, uf, };
   return CepAddress;
 }
 
